@@ -7,4 +7,6 @@ add_executable(c23 main.c
         str_reverser.c
         str_reserver.h
         LinkList/LinkList.h
-        LinkList/LinkList.c)
+        LinkList/LinkList.c
+        loopLinkList/loopLinkList.c
+        loopLinkList/loopLinkList.h)

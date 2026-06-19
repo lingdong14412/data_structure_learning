@@ -1,22 +1,22 @@
-#include "LinkList.h"
+#include "loopLinkList.h"
 
-Node *initList() {
+Node *initloopList() {
     Node* L=(Node*)malloc(sizeof(Node));
     L->data=0;
-    L->next=NULL;
+    L->next=L;
     return L;
 }
 
-void printList(Node *L) {
+void printloopList(Node *L) {
     Node* node=L->next;
-    while(node!=NULL) {
+    while(node!=L) {
         printf("%d ",node->data);
         node=node->next;
     }
     printf("\n");
 }
 
-void insertHead(Node* L,int data) {
+void insertloopHead(Node* L,int data) {
     Node* node=(Node*)malloc(sizeof(Node));
     Node *p=L;
     node->data=data;
@@ -24,10 +24,10 @@ void insertHead(Node* L,int data) {
     p->next=node;
 }
 
-int deleteNode(Node*L,int data) {
+int deleteloopNode(Node*L,int data) {
     Node*preNode=L;
     Node* node=L->next;
-    while (node->next!=NULL) {
+    while (node->next!=L) {
         if (node->data==data) {
             preNode->next=node->next;
             free(node);
@@ -39,10 +39,10 @@ int deleteNode(Node*L,int data) {
     return FALSE;
 }
 
-void insertTail(Node* L,int data) {
+void insertloopTail(Node* L,int data) {
     Node*node=(Node*)malloc(sizeof(Node));
     Node *p=L->next;
-    while (p->next!=NULL) {
+    while (p->next!=L) {
         p=p->next;
     }
     node->data=data;
