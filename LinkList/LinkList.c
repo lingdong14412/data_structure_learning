@@ -64,6 +64,7 @@ Node *reverseList(Node *L) {
         curr=next;
 
     }
+    free(next);
     L->next=prev;
     return L;
 }
