@@ -19,4 +19,5 @@ int deleteNode(Node* L,int data) ;
 
 void insertTail(Node* L,int data) ;
 
+Node*reverseList(Node* L) ;
 #endif //C23_LINKLIST_H

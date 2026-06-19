@@ -4,6 +4,7 @@
 #include "str_reserver.h"
 #include "LinkList/LinkList.h"
 #include "loopLinkList/loopLinkList.h"
+
 int main() {
     // char str[20]={'\0'};
     // int x=123456;
@@ -12,26 +13,27 @@ int main() {
     // char *str_reversed=str_reverser(str);
     // printf("%s",str_reversed);
 
-    // Node *Head = initList();
-    // insertHead(Head, 1);
-    // insertHead(Head, 4);
-    // insertHead(Head, 8);
-    // insertHead(Head, 6);
-    // insertHead(Head, 7);
-    // insertTail(Head,9);
-    // printList(Head);
+    Node *Head = initList();
+    insertHead(Head, 1);
+    insertHead(Head, 4);
+    insertHead(Head, 8);
+    insertHead(Head, 6);
+    insertHead(Head, 7);
+    insertTail(Head, 9);
+    printList(Head);
+    Node *reversed = reverseList(Head);
     // deleteNode(Head, 8);
-    // printList(Head);
+    printList(reversed);
 
-    Node*loopHead=initloopList();
-    insertloopHead(loopHead,1);
-    insertloopHead(loopHead,2);
-    insertloopHead(loopHead,3);
-    insertloopTail(loopHead,4);
-    insertloopHead(loopHead,5);
-    insertloopHead(loopHead,8);
-
-    printloopList(loopHead);
+    // Node*loopHead=initloopList();
+    // insertloopHead(loopHead,1);
+    // insertloopHead(loopHead,2);
+    // insertloopHead(loopHead,3);
+    // insertloopTail(loopHead,4);
+    // insertloopHead(loopHead,5);
+    // insertloopHead(loopHead,8);
+    //
+    // printloopList(loopHead);
 
     return 0;
 }
