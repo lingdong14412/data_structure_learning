@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 23)
 
 add_executable(c23 main.c
         str_reverser.c
-        str_reserver.h)
+        str_reserver.h
+        LinkList/LinkList.h
+        LinkList/LinkList.c)
