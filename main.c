@@ -5,7 +5,8 @@
 #include "LinkList/LinkList.h"
 #include "loopLinkList/loopLinkList.h"
 // #include "DoubleLinkList/DoubleLinkList.h"
-#include "loopDoubleLinkList/loopDoubleLinkList.h"
+// #include "loopDoubleLinkList/loopDoubleLinkList.h"
+#include "Stack/Stack.h"
 
 int main() {
     // char str[20]={'\0'};
@@ -55,15 +56,27 @@ int main() {
     // printf("%d", Head->data);
 
 
-    Node_double*Head=init_loopDoubleLinkList();
-    insert_loopDoubleHead(Head,3);
-    insert_loopDoubleHead(Head,7);
-    insert_loopDoubleHead(Head,4);
-    insert_loopDoubleHead(Head,6);
-    insert_loopDoubleTail(Head,9);
-    delete_loopDoubleList(Head,6);
-    print_loopDoubleList(Head);
+    // Node_double*Head=init_loopDoubleLinkList();
+    // insert_loopDoubleHead(Head,3);
+    // insert_loopDoubleHead(Head,7);
+    // insert_loopDoubleHead(Head,4);
+    // insert_loopDoubleHead(Head,6);
+    // insert_loopDoubleTail(Head,9);
+    // delete_loopDoubleList(Head,6);
+    // print_loopDoubleList(Head);
 
+
+    StackNode*Stack=initStack();
+    push(Stack,9);
+    push(Stack,5);
+    push(Stack,7);
+    // int a=pop(Stack);
+    // int b=pop(Stack);
+    // int c=pop(Stack);
+    // printf("%d %d %d\n",a,b,c);
+    printStack(Stack);
+
+    printf("\n%d",isEmpty(Stack));
 
 
     return 0;
