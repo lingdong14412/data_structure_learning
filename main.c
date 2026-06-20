@@ -6,8 +6,9 @@
 #include "loopLinkList/loopLinkList.h"
 // #include "DoubleLinkList/DoubleLinkList.h"
 // #include "loopDoubleLinkList/loopDoubleLinkList.h"
-#include "Stack/Stack.h"
+// #include "Stack/Stack.h"
 
+#include "Queue/Queue.h"
 int main() {
     // char str[20]={'\0'};
     // int x=123456;
@@ -66,18 +67,36 @@ int main() {
     // print_loopDoubleList(Head);
 
 
-    StackNode*Stack=initStack();
-    push(Stack,9);
-    push(Stack,5);
-    push(Stack,7);
+    // StackNode*Stack=initStack();
+    // push(Stack,9);
+    // push(Stack,5);
+    // push(Stack,7);
     // int a=pop(Stack);
     // int b=pop(Stack);
     // int c=pop(Stack);
     // printf("%d %d %d\n",a,b,c);
-    printStack(Stack);
+    // printStack(Stack);
 
-    printf("\n%d",isEmpty(Stack));
+    // printf("\n%d",isEmpty(Stack));
 
+
+    Node*MyQueue=initQueue();
+    enQueue(MyQueue,9);
+    enQueue(MyQueue,5);
+    enQueue(MyQueue,6);
+    enQueue(MyQueue,8);
+
+    printQueue(MyQueue);
+
+    deQueue(MyQueue);
+    deQueue(MyQueue);
+    //
+    // printQueue(MyQueue);
+    //
+    deQueue(MyQueue);
+    deQueue(MyQueue);
+
+    printf("%d",isEmpty_Queue(MyQueue));
 
     return 0;
 }
