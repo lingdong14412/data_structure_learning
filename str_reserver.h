@@ -1,7 +1,3 @@
-//
-// Created by LJZGDPU on 2026/6/8.
-//
-
 #ifndef C23_STR_RESERVER_H
 #define C23_STR_RESERVER_H
 

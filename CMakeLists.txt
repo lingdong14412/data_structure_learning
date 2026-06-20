@@ -9,4 +9,6 @@ add_executable(c23 main.c
         LinkList/LinkList.h
         LinkList/LinkList.c
         loopLinkList/loopLinkList.c
-        loopLinkList/loopLinkList.h)
+        loopLinkList/loopLinkList.h
+        DoubleLinkList/DoubleLinkList.h
+        DoubleLinkList/DoubleLinkList.c)
