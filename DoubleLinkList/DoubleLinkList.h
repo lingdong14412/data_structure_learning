@@ -1,7 +1,6 @@
 #ifndef C23_DOUBLELINKLIST_H
 #define C23_DOUBLELINKLIST_H
-#include <stdio.h>
-#include <stdlib.h>
+
 #define TRUE 1
 #define FALSE 0
 typedef struct Node_double {
@@ -10,7 +9,7 @@ typedef struct Node_double {
     struct Node_double *next;
 } Node_double;
 
-Node_double *init_DoubleLinklist();
+Node_double *init_DoubleLinkList();
 
 void insert_DoubleHead(Node_double *L, int data) ;
 

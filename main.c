@@ -4,7 +4,8 @@
 #include "str_reserver.h"
 #include "LinkList/LinkList.h"
 #include "loopLinkList/loopLinkList.h"
-#include "DoubleLinkList/DoubleLinkList.h"
+// #include "DoubleLinkList/DoubleLinkList.h"
+#include "loopDoubleLinkList/loopDoubleLinkList.h"
 
 int main() {
     // char str[20]={'\0'};
@@ -37,21 +38,33 @@ int main() {
     // printloopList(loopHead);
 
 
-    Node_double *Head = init_DoubleLinklist();
-    insert_DoubleHead(Head, 1);
-    insert_DoubleHead(Head, 3);
-    insert_DoubleHead(Head, 4);
-    insert_DoubleHead(Head, 5);
-    insert_DoubleHead(Head, 8);
-    insert_DoubleHead(Head, 6);
-    insert_DoubleTail(Head, 21);
-
-    print_DoubleList(Head);
-
-    delete_DoubleList(Head, 21);
-
-    print_DoubleList(Head);
+    // Node_double *Head = init_DoubleLinklist();
+    // insert_DoubleHead(Head, 1);
+    // insert_DoubleHead(Head, 3);
+    // insert_DoubleHead(Head, 4);
+    // insert_DoubleHead(Head, 5);
+    // insert_DoubleHead(Head, 8);
+    // insert_DoubleHead(Head, 6);
+    // insert_DoubleTail(Head, 21);
+    //
+    // print_DoubleList(Head);
+    //
+    // delete_DoubleList(Head, 21);
+    //
+    // print_DoubleList(Head);
     // printf("%d", Head->data);
+
+
+    Node_double*Head=init_loopDoubleLinkList();
+    insert_loopDoubleHead(Head,3);
+    insert_loopDoubleHead(Head,7);
+    insert_loopDoubleHead(Head,4);
+    insert_loopDoubleHead(Head,6);
+    insert_loopDoubleTail(Head,9);
+    delete_loopDoubleList(Head,6);
+    print_loopDoubleList(Head);
+
+
 
     return 0;
 }

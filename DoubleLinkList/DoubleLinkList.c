@@ -1,6 +1,7 @@
 #include "DoubleLinkList.h"
-
-Node_double *init_DoubleLinklist() {
+#include <stdio.h>
+#include <stdlib.h>
+Node_double *init_DoubleLinkList() {
     Node_double *L = malloc(sizeof(Node_double));
     L->data = 0;
     L->pre = NULL;
@@ -46,21 +47,14 @@ int delete_DoubleList(Node_double *L, const int data) {
 
     while (node) {
         if (node->data == data) {
-            // 1. 安全断开连接
+
             node->pre->next = node->next;
             if (node->next != NULL) {
                 node->next->pre = node->pre;
             }
 
-            // 2. 【核心】在 free 之前，先保存下一个节点的地址
-            Node_double *temp = node->next;
-
-            // 3. 释放内存
             free(node);
             L->data--;
-
-            // 4. 【核心】让 node 指向保存的下一个节点，而不是去访问已释放的内存
-            node = temp;
 
             return TRUE;
         }
