@@ -17,4 +17,6 @@ add_executable(c23 main.c
         stack/stack.h
         stack/stack.c
         Queue/Queue.h
-        Queue/Queue.c)
+        Queue/Queue.c
+        BinaryTree/BinaryTree.h
+        BinaryTree/BinaryTree.c)

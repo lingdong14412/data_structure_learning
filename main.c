@@ -8,7 +8,9 @@
 // #include "loopDoubleLinkList/loopDoubleLinkList.h"
 // #include "Stack/Stack.h"
 
-#include "Queue/Queue.h"
+// #include "Queue/Queue.h"
+
+#include "BinaryTree/BinaryTree.h"
 int main() {
     // char str[20]={'\0'};
     // int x=123456;
@@ -80,23 +82,38 @@ int main() {
     // printf("\n%d",isEmpty(Stack));
 
 
-    Node*MyQueue=initQueue();
-    enQueue(MyQueue,9);
-    enQueue(MyQueue,5);
-    enQueue(MyQueue,6);
-    enQueue(MyQueue,8);
+    // Node*MyQueue=initQueue();
+    // enQueue(MyQueue,9);
+    // enQueue(MyQueue,5);
+    // enQueue(MyQueue,6);
+    // enQueue(MyQueue,8);
 
-    printQueue(MyQueue);
+    // printQueue(MyQueue);
 
-    deQueue(MyQueue);
-    deQueue(MyQueue);
+    // deQueue(MyQueue);
+    // deQueue(MyQueue);
     //
     // printQueue(MyQueue);
     //
-    deQueue(MyQueue);
-    deQueue(MyQueue);
+    // deQueue(MyQueue);
+    // deQueue(MyQueue);
 
-    printf("%d",isEmpty_Queue(MyQueue));
+    // printf("%d",isEmpty_Queue(MyQueue));
+
+    TreeNode*tree;
+    int index=0;
+    char treeStr[]="ABD###CE###";
+    tree=createTree(treeStr,&index);
+
+    preOrder(tree);
+    printf("\n");
+    inOrder(tree);
+    printf("\n");
+    postOrder(tree);
+    printf("\n");
+
+
+
 
     return 0;
 }
