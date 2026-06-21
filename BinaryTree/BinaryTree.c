@@ -5,6 +5,7 @@
 
 
 TreeNode*createTree(char*tree,int*index) {
+    //必须用指针传递index，这样才可以影响上一层的调用，不然index一直都是同一个值
     TreeNode*T;
     char ch;
     ch=tree[*index];
