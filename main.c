@@ -1,16 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
 #include<Windows.h>
 #include <string.h>
-#include "str_reserver.h"
+#include "str_reverser.h"
 #include "LinkList/LinkList.h"
 #include "loopLinkList/loopLinkList.h"
 // #include "DoubleLinkList/DoubleLinkList.h"
 // #include "loopDoubleLinkList/loopDoubleLinkList.h"
 // #include "Stack/Stack.h"
-
 // #include "Queue/Queue.h"
 
 #include "BinaryTree/BinaryTree.h"
+
+
+
+#define string char*
 int main() {
     // char str[20]={'\0'};
     // int x=123456;
@@ -100,20 +103,25 @@ int main() {
 
     // printf("%d",isEmpty_Queue(MyQueue));
 
-    TreeNode*tree;
-    int index=0;
-    char treeStr[]="ABD###CE###";
-    tree=createTree(treeStr,&index);
+    // TreeNode*tree;
+    // int index=0;
+    // char treeStr[]="ABD###CE###";
+    // tree=createTree(treeStr,&index);
 
-    preOrder(tree);
-    printf("\n");
-    inOrder(tree);
-    printf("\n");
-    postOrder(tree);
-    printf("\n");
+    // preOrder(tree);
+    // printf("\n");
+    // inOrder(tree);
+    // printf("\n");
+    // postOrder(tree);
+    // printf("\n");
 
+    
 
+    char* a="abcef";
+    printf("%s\n",a);
 
+    char* b=str_reverser(a);
+    printf("%s\n",b);
 
     return 0;
 }
